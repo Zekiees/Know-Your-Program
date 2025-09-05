@@ -15,7 +15,7 @@
 html, body { height: 100%; }
 body{
   margin:0;
-  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "Poppins", system-ui, "apple-system", "Segoe UI", Arial, sans-serif;
   color: var(--ink);
   background-color: #eaf3ff;
 }
@@ -31,7 +31,7 @@ body{
   padding: 0.75rem 1rem;
   background: var(--brand);
   color: var(--paper);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 10;
   box-shadow: 0 6px 20px rgba(0,0,0,.15);
@@ -108,21 +108,27 @@ header.hero::after{
 .hero-inner{ color:white; padding: 5rem 1rem; max-width: 1100px; }
 .hero h1{ font-size: clamp(2.2rem, 5.2vw, 4rem); margin:.2rem 0 .6rem; }
 .hero p{ font-size: clamp(1rem, 2.3vw, 1.25rem); opacity:.95; }
-.cta{
-  display:inline-flex; 
-  align-items:center; 
-  gap:.6rem; 
-  margin-top:1.2rem;
+.cta {
+  display: inline-flex; 
+  align-items: center; 
+  gap: .6rem; 
+  margin-top: 1.2rem;
   background: var(--paper); 
   color: var(--brand-700); 
-  font-weight:800;
-  border:0; 
-  padding:.9rem 1.15rem; 
+  font-weight: 800;
+  border: 0; 
+  padding: .9rem 1.15rem; 
   border-radius: 14px; 
-  cursor:pointer;
+  cursor: pointer;
   box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  transition: all 0.35s cubic-bezier(.34,1.56,.64,1); /* 👈 bounce-like easing */
 }
-.cta:hover{ transform: translateY(-1px); box-shadow: 0 10px 28px rgba(0,0,0,.22); }
+
+.cta:hover { 
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+}
+
 .wrap{ max-width:1100px; margin: 3rem auto; padding:0 1rem; }
 .section { margin-bottom: 3rem; }
 h2{
@@ -225,7 +231,8 @@ h2{
   perspective: 1000px;
   width: 100%;
   max-width: 280px;
-  height: 280px;
+  height: 235px;
+  margin-bottom: 30px;
 }
 
 .card-inner {
@@ -324,12 +331,12 @@ h2{
 }
 
 .start-btn:hover {
-  background: #0ea5e9;       /* darker sky blue */
-  transform: scale(1.05);    /* pop */
+  background: #0ea5e9;
+  transform: scale(1.05);
 }
 
 .start-btn:active {
-  transform: scale(0.95);    /* pressed */
+  transform: scale(0.95);
 }
 
 /* Language-specific colors */
