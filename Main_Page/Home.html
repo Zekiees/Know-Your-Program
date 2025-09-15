@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Know Your Program</title>
+  <link rel="stylesheet" href="home_styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" type="text/css" href="path/to/your/css/flaticon.css">
+</head>
+<body>
+ <div class="topbar">
+  <div class="brand">Know Your Program</div>
+  <button class="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#modules">Modules</a>
+    <a href="#demo">Demo</a>
+    <a href="#contact">Contact</a>
+    <a href="../index.html" class="login-btn">Login</a>
+  </nav>
+</div>
+
+
+  <header class="hero">
+    <img src="../head-images/Londrina Shadow.jpg" alt="Know Your Program banner art with blue tones" />
+    <div class="hero-inner">
+      <h1>Learn Faster. Build Smarter.</h1>
+      <p>Let's start your journey with interactive learning!</p>
+      <button class="cta" onclick="scrollToLessons()">Explore Lessons →</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>What You'll Learn</h2>
+      <p>“Know Your Program” is an educational initiative designed to help students and beginners
+          understand the fundamentals of various programming languages. Through interactive lessons, 
+          practical coding exercises, and real-world projects, learners can build confidence and fluency 
+          in the language of their choice, whether it's Python, JavaScript, C++, or more.</p>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="section" aria-label="Modules">
+      <h2>Featured Modules</h2>
+      <div class="card-grid">
+        <article class="card">
+          <span class="badge">Beginner</span>
+          <h3>Foundations</h3>
+          <p>Start with programming basics, syntax, and problem-solving patterns.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Core</span>
+          <h3>Data Structures</h3>
+          <p>Lists, stacks, queues, trees, and graphs—understand how your tools work.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Core</span>
+          <h3>Algorithms</h3>
+          <p>Sorting, searching, and complexity—learn to make programs efficient.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Plus</span>
+          <h3>Web Projects</h3>
+          <p>Apply your skills to interactive UIs with responsive layouts and clean code.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+  <h2>Interactive Demo</h2>
+  <p>Experiment with HTML, CSS, and JavaScript right here in your browser!</p>
+
+  <div class="code-editor">
+    <div class="editor-tabs">
+      <button class="tab-btn active" data-tab="html">HTML</button>
+      <button class="tab-btn" data-tab="css">CSS</button>
+      <button class="tab-btn" data-tab="js">JavaScript</button>
+    </div>
+    
+    <div class="editor-areas">
+      <textarea id="html-code" class="code-input" spellcheck="false">
+<h1>Hello World!</h1>
+<p>This is your live demo area.</p>
+      </textarea>
+      <textarea id="css-code" class="code-input hidden" spellcheck="false">
+body {
+  font-family: Poppins, sans-serif;
+  background-color:rgba(69,103,255,0.15);
+  color:#E7ECFF;
+  text-align: center;
+}
+h1 {
+  color: #4567FF;
+}
+      </textarea>
+      <textarea id="js-code" class="code-input hidden" spellcheck="false">
+document.body.style.border = "4px solid #4567FF";
+      </textarea>
+    </div>
+
+    <iframe id="output" class="output"></iframe>
+  </div>
+</section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+      <h2>What Our Students Say</h2>
+      <blockquote>
+        “This program made coding so much easier to understand!” — Alex, Student
+      </blockquote>
+      <blockquote>
+        “I built my first web app thanks to Know Your Program.” — Jamie, Graduate
+      </blockquote>
+    </section>
+
+   <section>
+    <h2 id="lessons">Lessons</h2>
+    <div class="lesson-grid">
+
+      <!-- HTML -->
+<div class="lesson-card">
+  <div class="card-inner">
+    <div class="card-front html-card">
+      <i class="devicon-html5-plain colored" style="font-size: 60px;"></i>
+      <h3 class="html-text">HTML</h3>
+      <p class="hover-text">Hover me!</p>
+    </div>
+    <div class="card-back html-card-back">
+      <p>Learn the building blocks of web pages using HTML &lt;tags&gt; and elements.</p>
+      <a href="../HTML_Lessons/html_lesson.html" class="start-btn">Click me to Learn more</a>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<div class="lesson-card">
+  <div class="card-inner">
+    <div class="card-front css-card">
+      <i class="devicon-css3-plain colored" style="font-size: 60px;"></i>
+      <h3 class="css-text">CSS</h3>
+      <p class="hover-text">Hover me!</p>
+    </div>
+    <div class="card-back css-card-back">
+      <p>Style your web pages with colors, layout, and responsive design.</p>
+      <a href="HTML_Lessons/css-lesson.html" class="start-btn">Click me to Learn more</a>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<div class="lesson-card">
+  <div class="card-inner">
+    <div class="card-front js-card">
+      <i class="devicon-javascript-plain colored" style="font-size: 75px;"></i>
+      <h3 class="js-text">JavaScript</h3>
+      <p class="hover-text">Hover me!</p>
+    </div>
+    <div class="card-back js-card-back">
+      <p>Add interactivity and dynamic features to your web pages.</p>
+      <a href="Lessons/js-lesson.html" class="start-btn">Click me to Learn more</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+
+
+
+    <!-- Resources Section -->
+    <section id="resources" class="section">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="#">Python Cheat Sheet</a></li>
+        <li><a href="#">JavaScript Quick Guide</a></li>
+        <li><a href="#">C++ Basics PDF</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact / Join Us -->
+    <section id="contact" class="section">
+      <h2>Join Us</h2>
+      <p>Email <a href="mailto:me@example.com">me@example.com</a> to register or ask questions.</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="y"></span> Know Your Program. Inspired by interactive learning and modern design.</small>
+  </footer>
+
+  <script src="home_script.js"></script>
+</body>
+</html>
