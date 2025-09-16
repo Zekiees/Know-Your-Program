@@ -1,27 +1,51 @@
-// Handle popovers
-document.querySelectorAll(".concept-nav-list a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".sidebar a");
+  const sidebar = document.querySelector(".sidebar");
+  const lastLesson = document.querySelector("#lesson16");
 
-    // Hide any open popover
-    document.querySelectorAll(".popover").forEach(pop => pop.style.display = "none");
+  // Highlight active link
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
 
-    // Find target popover
-    const targetId = link.getAttribute("data-popover");
-    const popover = document.getElementById(targetId);
+  // Stop sidebar scroll at lesson 16
+  window.addEventListener("scroll", () => {
+    const rect = lastLesson.getBoundingClientRect();
 
-    if (popover) {
-      const rect = link.getBoundingClientRect();
-      popover.style.display = "block";
-      popover.style.top = rect.bottom + window.scrollY + 8 + "px";
-      popover.style.left = rect.left + window.scrollX + "px";
+    if (rect.top <= 100) {
+      sidebar.style.position = "absolute";
+      sidebar.style.bottom = "0";
+      sidebar.style.top = "auto";
+    } else {
+      sidebar.style.position = "sticky";
+      sidebar.style.top = "1rem";
+      sidebar.style.bottom = "auto";
     }
   });
 });
 
-// Close popover when clicking outside
-document.addEventListener("click", e => {
-  if (!e.target.closest(".concept-nav-list")) {
-    document.querySelectorAll(".popover").forEach(pop => pop.style.display = "none");
+// Progress Bar
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.querySelector(".progress-bar").style.width = progress + "%";
+});
+
+// Back to Top
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
   }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });

@@ -1,190 +1,310 @@
-:root {
-  --brand: #4567FF;
-  --brand-600: #314EE2;
-  --brand-700: #263EC0;
-  --ink: #E6E6E6;        /* light text for dark bg */
-  --paper: #1E1E24;      /* form container bg */
-  --soft: #2A2F3C;       /* input bg */
-  --brand-html: #E44D26; /* orange accent */
+/* 🌙 Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {height: 100%;}
+:root {
+  --brand: #314EE2;        /* main blue */
+  --brand-600: #4567FF;    /* lighter accent blue */
+  --brand-700: #263EC0;    /* deeper blue */
+  --brand-html: #E44D26;   /* HTML orange */
+  --ink: #E7ECFF;          /* light ink for dark bg */
+}
+
 body {
-  margin: 0;
-  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background: #0d1117; /* dark global bg */
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
 
 /* Topbar */
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  background: var(--brand-html); /* orange */
-  color: var(--paper);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+.topbar { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 1rem; 
+  padding: 0.75rem 1rem; 
+  background: linear-gradient(90deg, #1E1E24, #E44D26); 
+  color: var(--ink); 
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+  box-shadow: 0 6px 20px rgba(0,0,0,.25); 
 }
-.header-wrapper { position: relative; }
-.brand { font-weight: 800; letter-spacing: .3px; }
-.nav a {
-  color: var(--paper);
-  text-decoration: none;
-  font-weight: 600;
-  opacity: .9;
-  padding: .4rem .6rem;
-  border-radius: 10px;
+
+.brand { 
+  font-weight: 800; 
+  letter-spacing: .3px; 
 }
-.nav a:hover { background: rgba(255,255,255,.18); }
+
+.nav a { 
+  color: var(--ink); 
+  text-decoration: none; 
+  font-weight: 600; 
+  opacity: .9; 
+  padding: .4rem .6rem; 
+  border-radius: 10px; 
+}
+
+.nav a:hover { 
+  background: rgba(255,255,255,.18); 
+}
 
 /* Hero */
-header.hero {
-  position: relative;
-  isolation: isolate;
-  min-height: 50dvh;
-  display: grid;
-  overflow: hidden;
-  border-bottom-left-radius: 28px;
-  border-bottom-right-radius: 28px;
-}
-header.hero > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(150%) contrast(105%);
-  z-index: -2;
-}
-header.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(38,62,192,.70), rgba(69,103,255,.55));
-  mix-blend-mode: multiply;
-}
-.hero-inner {
-  color: var(--ink);
-  padding: 5rem 1rem;
-  max-width: 1100px;
-}
-.hero h1 {
-  font-size: clamp(2.2rem, 5.2vw, 4rem);
-  margin: .2rem 0 .6rem;
-}
-.hero p {
-  font-size: clamp(1rem, 2.3vw, 1.25rem);
-  opacity: .95;
+header.hero { 
+  position: relative; 
+  isolation: isolate; 
+  min-height: 50dvh; 
+  display: grid; 
+  overflow: hidden; 
+  border-bottom-left-radius: 28px; 
+  border-bottom-right-radius: 28px; 
 }
 
-/* Layout */
-.wrap {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-.section { margin-bottom: 3rem; }
-h2 { color: var(--brand-html); }
-
-/* Concept Box */
-.concept-box {
-  max-width: 1100px;
-  margin: 2.5rem auto;
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--paper); /* dark box */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+header.hero > img { 
+  position: absolute; 
+  inset: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  filter: saturate(150%) contrast(105%); 
+  z-index: -2; 
 }
 
-/* Title */
-.concept-box h3 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(90deg, #ffe100, #ff9f1c, var(--brand-html));
-  letter-spacing: 1px;
+header.hero::after { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  z-index: -1; 
+  background: linear-gradient(180deg, rgba(38,62,192,.70), rgba(69,103,255,.55)); 
+  mix-blend-mode: multiply; 
 }
 
-/* Concept nav */
-.concept-nav-list {
+.hero-inner { 
+  color: var(--ink); 
+  padding: 5rem 1rem; 
+  max-width: 1100px; 
+}
+
+.hero h1 { 
+  font-size: clamp(2.2rem, 5.2vw, 4rem); 
+  margin: .2rem 0 .6rem; 
+}
+
+.hero p { 
+  font-size: clamp(1rem, 2.3vw, 1.25rem); 
+  opacity: .95; 
+}
+
+
+/* ✅ Container */
+.container {
+  display: flex;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+/* ✅ Sidebar */
+.sidebar {
+  width: 230px;
+  background: linear-gradient(180deg, #1E1E24, #121212);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  position: sticky;
+  top: 1rem;             /* sticks after 1rem from top */
+  align-self: flex-start;
+  max-height: calc(100vh - 2rem); 
+  overflow-y: auto; 
+}
+.sidebar ul {
   list-style: none;
-  margin: 0;
-  padding: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  position: relative;
 }
-
-.concept-nav-list a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
+.sidebar li {
+  margin-bottom: .6rem;
+}
+.sidebar a {
+  display: block;
+  padding: .6rem 1rem;
+  border-radius: 8px;
   text-decoration: none;
-  color: var(--ink);
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  background: var(--soft);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-  transition: background 0.25s ease, transform 0.2s ease, color 0.25s ease;
-  font-size: 1rem;
-  position: relative;
+  color: #ddd;
+  font-weight: 500;
+  transition: all .3s ease;
 }
-.concept-nav-list a:hover {
+.sidebar a:hover {
   background: var(--brand-html);
-  color: #fff;
-  transform: translateY(-3px);
+  color: white;
+  transform: translateX(5px);
 }
 
-/* Responsive: Stack on smaller devices */
-@media (max-width: 600px) {
-  .concept-nav-list {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .concept-nav-list a {
-    justify-content: center;
-    font-size: 1.05rem;
-  }
+/* ✅ Lessons Section */
+.lessons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.lesson {
+  background: #1b1b20;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 6px solid var(--brand-html);
+  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  transition: transform .25s ease, box-shadow .3s ease;
+}
+.lesson:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.6);
+}
+.lesson h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brand-html);
+  margin-bottom: .8rem;
+}
+.lesson p {
+  margin-bottom: 1rem;
 }
 
-/* Popover Base */
-.popover {
-  position: absolute;
-  background: var(--paper);
-  color: var(--ink);
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+/* ✅ Code Blocks */
+pre {
+  background: #0d1117;
   padding: 1rem;
-  font-size: 0.95rem;
-  max-width: 250px;
-  display: none;
-  z-index: 100;
-  animation: fadeIn 0.2s ease;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid rgba(255,255,255,.08);
 }
-.popover::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 20px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: transparent transparent var(--paper) transparent;
+pre code {
+  font-family: "Fira Code", monospace;
+  font-size: .95rem;
+  color: #f5f5f5;
+}
+pre code .tag { color: #e44d26; }
+pre code .attr { color: #ffcc00; }
+pre code .val { color: #4fc3f7; }
+
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;                /* a bit thicker for main scroll */
 }
 
-/* Fade animation */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-5px);}
-  to {opacity: 1; transform: translateY(0);}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;         /* dark background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #444, #222); /* subtle depth */
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e44d26;         /* HTML orange on hover */
+}
+
+/* Firefox fallback */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+/* Sidebar-specific scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;                  /* thinner sidebar scroll */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #121212; 
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #e44d26;
+}
+
+/* Keep your existing CSS – here are the additions */
+
+/* Progress Bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--brand-html);
+  width: 0%;
+  z-index: 9999;
+}
+
+/* Badge for lesson numbers */
+.badge {
+  display: inline-block;
+  background: var(--brand-html);
+  color: white;
+  font-weight: bold;
+  padding: .2rem .6rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #1E1E24, #121212);
+  border-top: 2px solid var(--brand-html);
+  color: #ccc;
+}
+.footer a {
+  color: var(--brand-html);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--brand-html);
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none; /* hidden until scroll */
+  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background: var(--brand-600);
+}
+
+
+
+/* ✅ Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
 }

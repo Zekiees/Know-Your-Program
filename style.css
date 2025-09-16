@@ -311,7 +311,7 @@ body{
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        width: 95%;
+        width: 100%;
         height: auto;
         min-height: 600px;
     }
@@ -320,7 +320,9 @@ body{
         width: 100%;
         padding: 30px;
         height: auto;
-        position: relative;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
     }
 
     .info-content {
@@ -352,13 +354,17 @@ body{
 
 @media (max-width: 480px) {
     .container {
-        width: 95%;
+        width: 100%;
         height: auto;
-        min-height: 550px;
+        min-height: 510px;
     }
 
     .form-box {
         padding: 20px 15px;
+        position: absolute;
+        align-items: center;
+        justify-self: center;
+
     }
 
     .form-box h2,
