@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Lessons</title>
+  <link rel="stylesheet" href="css_design.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="brand">Know Your Program</div>
+    <nav class="nav">
+      <a href="../Main_Page/Home.html">Home Page</a>
+    </nav>
+    <!-- ✅ Hamburger now uses spans for better styling -->
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="progress-bar"></div>
+
+<!-- Hero Section -->
+<header class="hero">
+  <img src="/head-images/Londrina Shadow css.jpg" alt="Know Your Program CSS banner art" />
+  <div class="hero-inner">
+    <h1>CSS Lessons</h1>
+    <p>🎨 18 Lessons • Beginner Friendly • Hands-On Styling</p>
+  </div>
+</header>
+
+<!-- Introduction Section -->
+<section class="lesson intro">
+  <h2>Welcome to CSS Lessons 🎨</h2>
+  <p>
+    This course will introduce you to the world of 
+    <strong>CSS (Cascading Style Sheets)</strong> — the language used to 
+    style and design web pages.  
+    You’ll learn how to control colors, layouts, fonts, and more.
+  </p>
+  <p>
+    🧠 There are <strong>18 lessons</strong>, each focusing on practical 
+    examples and visual techniques.  
+    By the end, you’ll be able to make any webpage look amazing!
+  </p>
+</section>
+
+<!-- ✅ CSS Lessons Page -->
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#lesson1">Lesson 1: Introduction</a></li>
+      <li><a href="#lesson2">Lesson 2: Syntax</a></li>
+      <li><a href="#lesson3">Lesson 3: Selectors</a></li>
+      <li><a href="#lesson4">Lesson 4: Colors & Backgrounds</a></li>
+      <li><a href="#lesson5">Lesson 5: Text Styling</a></li>
+      <li><a href="#lesson6">Lesson 6: Box Model</a></li>
+      <li><a href="#lesson7">Lesson 7: Positioning</a></li>
+      <li><a href="#lesson8">Lesson 8: Flexbox</a></li>
+      <li><a href="#lesson9">Lesson 9: Grid</a></li>
+      <li><a href="#lesson10">Lesson 10: Pseudo-classes</a></li>
+      <li><a href="#lesson11">Lesson 11: Transitions</a></li>
+      <li><a href="#lesson12">Lesson 12: Animations</a></li>
+      <li><a href="#lesson13">Lesson 13: Variables</a></li>
+      <li><a href="#lesson14">Lesson 14: Media Queries</a></li>
+      <li><a href="#lesson15">Lesson 15: Best Practices</a></li>
+      <li><a href="#lesson16">Lesson 16: Pseudo-elements</a></li>
+      <li><a href="#lesson17">Lesson 17: Responsive Design</a></li>
+      <li><a href="#lesson18">Lesson 18: CSS Frameworks</a></li>
+    </ul>
+  </aside>
+
+  <!-- Lessons -->
+  <main class="lessons">
+
+    <section class="lesson" id="lesson1">
+      <h2>Lesson 1: Introduction to CSS</h2>
+      <p>CSS (Cascading Style Sheets) styles and layouts HTML elements, controlling colors, fonts, spacing, and more.</p>
+<pre><code>body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson2">
+      <h2>Lesson 2: CSS Syntax</h2>
+      <p>CSS uses selectors and declarations to define how elements look.</p>
+<pre><code>selector {
+  property: value;
+}
+
+h1 {
+  color: blue;
+  font-size: 24px;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson3">
+      <h2>Lesson 3: Selectors</h2>
+      <p>Selectors target HTML elements — use element, class, or ID selectors.</p>
+<pre><code>p { color: gray; }
+.button { background: blue; }
+#main-title { font-weight: bold; }</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson4">
+      <h2>Lesson 4: Colors & Backgrounds</h2>
+      <p>Use colors and gradients to style your site visually.</p>
+<pre><code>body {
+  background-color: #0d1117;
+  color: #e7ecff;
+}
+
+header {
+  background-image: linear-gradient(90deg, #264de4, #2965f1);
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson5">
+      <h2>Lesson 5: Text Styling</h2>
+      <p>Change font, alignment, spacing, and effects with CSS.</p>
+<pre><code>h1 {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  text-shadow: 0 0 8px #00c8ff;
+}
+
+p {
+  line-height: 1.6;
+  color: #ccc;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson6">
+      <h2>Lesson 6: Box Model</h2>
+      <p>Every HTML element is a box made of content, padding, border, and margin.</p>
+<pre><code>div {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #2965f1;
+  margin: 15px;
+  background-color: #111827;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson7">
+      <h2>Lesson 7: Positioning</h2>
+      <p>Position elements anywhere using static, relative, absolute, fixed, or sticky.</p>
+<pre><code>.box {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson8">
+      <h2>Lesson 8: Flexbox</h2>
+      <p>Flexbox makes aligning and spacing items in a container easy.</p>
+<pre><code>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson9">
+      <h2>Lesson 9: Grid</h2>
+      <p>CSS Grid is a 2D system for complex layouts.</p>
+<pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson10">
+      <h2>Lesson 10: Pseudo-classes</h2>
+      <p>Define element states like hover or focus.</p>
+<pre><code>a:hover {
+  color: #00c8ff;
+  text-decoration: underline;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson11">
+      <h2>Lesson 11: Transitions</h2>
+      <p>Add smooth visual effects when properties change.</p>
+<pre><code>button {
+  background: #2965f1;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1b3fa2;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson12">
+      <h2>Lesson 12: Animations</h2>
+      <p>Make elements move or fade using keyframes.</p>
+<pre><code>@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.box {
+  animation: fadeIn 1s ease-in-out;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson13">
+      <h2>Lesson 13: Variables</h2>
+      <p>CSS variables store reusable color, size, or font values.</p>
+<pre><code>:root {
+  --main-color: #2965f1;
+  --text-light: #e7ecff;
+}
+
+button {
+  background: var(--main-color);
+  color: var(--text-light);
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson14">
+      <h2>Lesson 14: Media Queries</h2>
+      <p>Make designs responsive using conditional CSS rules.</p>
+<pre><code>@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    background: #0d1117;
+  }
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson15">
+      <h2>Lesson 15: Best Practices</h2>
+      <p>Keep your CSS readable and well-organized for maintainability.</p>
+<pre><code>/* Use clear class names */
+.navbar {}
+.footer {}
+
+/* Separate layout and theme */
+.layout { display: flex; }
+.theme-dark { background: #0d1117; }</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson16">
+      <h2>Lesson 16: Pseudo-elements</h2>
+      <p>Pseudo-elements style specific parts of elements, like the first line or before/after content.</p>
+<pre><code>p::first-line {
+  font-weight: bold;
+}
+
+button::after {
+  content: " →";
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson17">
+      <h2>Lesson 17: Responsive Design</h2>
+      <p>Responsive design ensures your site looks good on all screen sizes.</p>
+<pre><code>img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 1rem;
+}</code></pre>
+    </section>
+
+    <section class="lesson" id="lesson18">
+      <h2>Lesson 18: CSS Frameworks</h2>
+      <p>Frameworks like Bootstrap and Tailwind CSS speed up development with prebuilt styles and utilities.</p>
+<pre><code>/* Example (Tailwind) */
+&lt;button class="bg-blue-600 text-white px-4 py-2 rounded"&gt;Click Me&lt;/button&gt;</code></pre>
+    </section>
+
+  </main>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Know Your Program. All rights reserved.</p>
+    <p><a href="../Main_Page/Home.html">🏠 Back to Home</a></p>
+  </footer>
+
+  <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">↑</button>
+
+  <script src="html_script.js"></script>
+</body>
+</html>

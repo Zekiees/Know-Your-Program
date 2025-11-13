@@ -9,12 +9,20 @@
 <body>
 
   <!-- Topbar -->
-<div class="topbar">
-  <div class="brand">Know Your Program</div>
-  <nav class="nav">
-    <a href="../Main_Page/Home.html">Home Page</a>
-  </nav>
-</div>
+  <div class="topbar">
+    <div class="brand">Know Your Program</div>
+    <nav class="nav">
+      <a href="../Main_Page/Home.html">Home Page</a>
+    </nav>
+    <!-- ✅ Hamburger now uses spans for better styling -->
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="progress-bar"></div>
+
 
 <!-- Hero Section -->
 <header class="hero">
@@ -24,6 +32,23 @@
     <p>🚀 16 Lessons • Beginner Friendly • Step-by-Step</p>
   </div>
 </header>
+
+<!-- Introduction Section -->
+<section class="lesson intro">
+  <h2>Welcome to HTML Lessons 🚀</h2>
+  <p>
+    This course will guide you step by step through the basics of 
+    <strong>HTML (HyperText Markup Language)</strong>.  
+    You’ll learn how to create web pages, structure content, and apply 
+    best practices.  
+  </p>
+  <p>
+    📘 There are <strong>16 lessons</strong>, each with explanations and 
+    example code you can copy and try on your own.  
+    By the end, you’ll be ready to build your first website!
+  </p>
+</section>
+
 
 
   <!-- ✅ Content -->

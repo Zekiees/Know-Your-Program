@@ -1,11 +1,43 @@
 const container = document.querySelector('.container');
-const LoginLink = document.querySelector('.SignInLink');
-const RegisterLink = document.querySelector('.SignUpLink');
+const loginLink = document.querySelector('.SignInLink');
+const registerLink = document.querySelector('.SignUpLink');
 
-RegisterLink.addEventListener('click', () =>{
-    container.classList.add('active');
-})
+// Switch between Login and Register
+registerLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  container.classList.add('active');
+});
 
-LoginLink.addEventListener('click', () => {
-    container.classList.remove('active');
-})
+loginLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  container.classList.remove('active');
+});
+
+// Validation + Redirect
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.querySelector(".form-box.Login form");
+  const loginBtn = loginForm.querySelector("button");
+
+  loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (loginForm.checkValidity()) {
+      window.location.href = 'Main_Page/Home.html';
+    } else {
+      alert("⚠️ Please complete all login fields correctly.");
+      loginForm.reportValidity();
+    }
+  });
+
+  const registerForm = document.querySelector(".form-box.Register form");
+  const registerBtn = registerForm.querySelector("button");
+
+  registerBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (registerForm.checkValidity()) {
+      window.location.href = 'Main_Page/Home.html';
+    } else {
+      alert("⚠️ Please complete all registration fields correctly.");
+      registerForm.reportValidity();
+    }
+  });
+});
