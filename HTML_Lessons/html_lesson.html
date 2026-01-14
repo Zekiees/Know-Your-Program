@@ -14,7 +14,6 @@
     <nav class="nav">
       <a href="../Main_Page/Home.html">Home Page</a>
     </nav>
-    <!-- ✅ Hamburger now uses spans for better styling -->
     <button id="hamburger" class="hamburger" aria-label="Toggle menu">
       <span></span>
       <span></span>
@@ -23,154 +22,122 @@
   </div>
   <div class="progress-bar"></div>
 
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="/head-images/Londrina Shadow html.jpg" alt="Know Your Program banner art" />
+    <div class="hero-inner">
+      <h1>HTML Lessons</h1>
+      <p>🚀 Learn HTML Step-by-Step • Beginner to Advanced • Fully Illustrated</p>
+    </div>
+  </header>
 
-<!-- Hero Section -->
-<header class="hero">
-  <img src="/head-images/Londrina Shadow html.jpg" alt="Know Your Program banner art" />
-  <div class="hero-inner">
-    <h1>HTML Lessons</h1>
-    <p>🚀 16 Lessons • Beginner Friendly • Step-by-Step</p>
-  </div>
-</header>
+  <!-- Introduction Section -->
+  <section class="lesson intro">
+    <h2>Welcome to HTML Lessons 🚀</h2>
+    <p>
+      HTML (<strong>HyperText Markup Language</strong>) is the backbone of all webpages.  
+      This course covers everything from the basics to advanced HTML concepts.  
+      By the end, you’ll be able to build well-structured, accessible, and responsive websites.
+    </p>
+  </section>
 
-<!-- Introduction Section -->
-<section class="lesson intro">
-  <h2>Welcome to HTML Lessons 🚀</h2>
-  <p>
-    This course will guide you step by step through the basics of 
-    <strong>HTML (HyperText Markup Language)</strong>.  
-    You’ll learn how to create web pages, structure content, and apply 
-    best practices.  
-  </p>
-  <p>
-    📘 There are <strong>16 lessons</strong>, each with explanations and 
-    example code you can copy and try on your own.  
-    By the end, you’ll be ready to build your first website!
-  </p>
-</section>
-
-
-
-  <!-- ✅ Content -->
+  <!-- Container -->
   <div class="container">
-    
+
     <!-- Sidebar -->
     <aside class="sidebar">
       <ul>
-        <li><a href="#lesson1">Lesson 1: Introduction</a></li>
-        <li><a href="#lesson2">Lesson 2: Setup</a></li>
-        <li><a href="#lesson3">Lesson 3: Structure</a></li>
-        <li><a href="#lesson4">Lesson 4: Text</a></li>
-        <li><a href="#lesson5">Lesson 5: Links & Images</a></li>
-        <li><a href="#lesson6">Lesson 6: Lists</a></li>
-        <li><a href="#lesson7">Lesson 7: Tables</a></li>
-        <li><a href="#lesson8">Lesson 8: Forms</a></li>
-        <li><a href="#lesson9">Lesson 9: Semantic HTML</a></li>
-        <li><a href="#lesson10">Lesson 10: Media</a></li>
-        <li><a href="#lesson11">Lesson 11: Iframes</a></li>
-        <li><a href="#lesson12">Lesson 12: HTML APIs</a></li>
-        <li><a href="#lesson13">Lesson 13: CSS Intro</a></li>
-        <li><a href="#lesson14">Lesson 14: Responsive</a></li>
-        <li><a href="#lesson15">Lesson 15: Projects</a></li>
-        <li><a href="#lesson16">Lesson 16: Cheatsheets</a></li>
+        <!-- Basics -->
+        <li><a href="#intro-html">What is HTML?</a></li>
+        <li><a href="#setup">Setup & File Structure</a></li>
+        <li><a href="#tags-attributes">Tags & Attributes</a></li>
+        <li><a href="#text">Text & Headings</a></li>
+        <li><a href="#links-images">Links & Images</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tables">Tables</a></li>
+
+        <!-- Intermediate -->
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#media">Audio & Video</a></li>
+        <li><a href="#iframes">Iframes</a></li>
+        <li><a href="#semantic">Semantic HTML</a></li>
+        <li><a href="#classes-ids">Classes & IDs</a></li>
+        <li><a href="#meta">Meta Tags</a></li>
+        <li><a href="#responsive-images">Responsive Images</a></li>
+
+        <!-- Advanced -->
+        <li><a href="#entities">HTML Entities</a></li>
+        <li><a href="#data-attributes">Data Attributes</a></li>
+        <li><a href="#svg">SVG Graphics</a></li>
+        <li><a href="#canvas-advanced">Canvas (Advanced)</a></li>
+        <li><a href="#accessibility">Accessibility (ARIA)</a></li>
+        <li><a href="#seo">SEO HTML</a></li>
+        <li><a href="#open-graph">Open Graph Tags</a></li>
       </ul>
     </aside>
 
     <!-- Lessons -->
     <main class="lessons">
 
-      <!-- Lesson 1 -->
-      <section class="lesson" id="lesson1">
-        <h2>Lesson 1: Introduction to HTML</h2>
-        <p>HTML stands for HyperText Markup Language. It is the backbone of all web pages.</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My First Page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+      <!-- Basics -->
+      <section class="lesson" id="intro-html">
+        <h2>What is HTML?</h2>
+        <p>HTML is the foundation of all webpages. It structures content like headings, paragraphs, links, and images for browsers to display.</p>
       </section>
 
-      <!-- Lesson 2 -->
-      <section class="lesson" id="lesson2">
-        <h2>Lesson 2: Setup</h2>
-        <p>Every HTML file starts with a <code>&lt;!DOCTYPE html&gt;</code> and the basic structure.</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+      <section class="lesson" id="setup">
+        <h2>Setup & File Structure</h2>
+        <p>Every HTML document begins with <code>&lt;!DOCTYPE html&gt;</code>. It contains the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Setup Example&lt;/title&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p&gt;This is my first HTML setup.&lt;/p&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
       </section>
 
-      <!-- Lesson 3 -->
-      <section class="lesson" id="lesson3">
-        <h2>Lesson 3: Structure</h2>
-        <p>HTML uses elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to structure content.</p>
-<pre><code>&lt;header&gt;
-  &lt;h1&gt;My Website&lt;/h1&gt;
-&lt;/header&gt;
-
-&lt;main&gt;
-  &lt;p&gt;This is the main content.&lt;/p&gt;
-&lt;/main&gt;
-
-&lt;footer&gt;
-  &lt;p&gt;© 2025 My Site&lt;/p&gt;
-&lt;/footer&gt;
-</code></pre>
+      <section class="lesson" id="tags-attributes">
+        <h2>Tags & Attributes</h2>
+        <p>HTML elements are represented by tags. Attributes provide extra info, like <code>href</code> for links or <code>src</code> for images.</p>
+<pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+&lt;img src="image.jpg" alt="Alt text"&gt;</code></pre>
       </section>
 
-      <!-- Lesson 4 -->
-      <section class="lesson" id="lesson4">
-        <h2>Lesson 4: Text</h2>
-        <p>HTML supports headings, paragraphs, and text formatting.</p>
+      <section class="lesson" id="text">
+        <h2>Text & Headings</h2>
+        <p>Use headings (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>) for titles and <code>&lt;p&gt;</code> for paragraphs. Use <code>&lt;strong&gt;</code> for bold and <code>&lt;em&gt;</code> for italics.</p>
 <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
-&lt;h2&gt;Heading 2&lt;/h2&gt;
-&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word.&lt;/p&gt;
-&lt;p&gt;This is an &lt;em&gt;italic&lt;/em&gt; word.&lt;/p&gt;
-</code></pre>
+&lt;p&gt;This is a paragraph with &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;</code></pre>
       </section>
 
-      <!-- Lesson 5 -->
-      <section class="lesson" id="lesson5">
-        <h2>Lesson 5: Links & Images</h2>
-        <p>Use <code>&lt;a&gt;</code> for links and <code>&lt;img&gt;</code> for images.</p>
+      <section class="lesson" id="links-images">
+        <h2>Links & Images</h2>
+        <p>Links (<code>&lt;a&gt;</code>) navigate users, while images (<code>&lt;img&gt;</code>) display pictures. Always include <code>alt</code> text for accessibility.</p>
 <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
-
-&lt;img src="https://picsum.photos/200" alt="Random Image"&gt;
-</code></pre>
+&lt;img src="https://picsum.photos/200" alt="Random Image"&gt;</code></pre>
       </section>
 
-      <!-- Lesson 6 -->
-      <section class="lesson" id="lesson6">
-        <h2>Lesson 6: Lists</h2>
-        <p>HTML has ordered (<code>&lt;ol&gt;</code>) and unordered (<code>&lt;ul&gt;</code>) lists.</p>
+      <section class="lesson" id="lists">
+        <h2>Lists</h2>
+        <p>Unordered lists (<code>&lt;ul&gt;</code>) use bullets; ordered lists (<code>&lt;ol&gt;</code>) use numbers. List items are <code>&lt;li&gt;</code>.</p>
 <pre><code>&lt;ul&gt;
-  &lt;li&gt;Apples&lt;/li&gt;
-  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
   &lt;li&gt;First&lt;/li&gt;
   &lt;li&gt;Second&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
+&lt;/ol&gt;</code></pre>
       </section>
 
-      <!-- Lesson 7 -->
-      <section class="lesson" id="lesson7">
-        <h2>Lesson 7: Tables</h2>
-        <p>Tables display data in rows and columns.</p>
+      <section class="lesson" id="tables">
+        <h2>Tables</h2>
+        <p>Tables organize data into rows (<code>&lt;tr&gt;</code>) and columns (<code>&lt;td&gt;</code>). Use <code>&lt;th&gt;</code> for headings.</p>
 <pre><code>&lt;table border="1"&gt;
   &lt;tr&gt;
     &lt;th&gt;Name&lt;/th&gt;
@@ -180,136 +147,132 @@
     &lt;td&gt;Alice&lt;/td&gt;
     &lt;td&gt;20&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;
-</code></pre>
+&lt;/table&gt;</code></pre>
       </section>
 
-      <!-- Lesson 8 -->
-      <section class="lesson" id="lesson8">
-        <h2>Lesson 8: Forms</h2>
-        <p>Forms let users input data like text, emails, or passwords.</p>
+      <!-- Intermediate -->
+      <section class="lesson" id="forms">
+        <h2>Forms</h2>
+        <p>Forms allow users to submit data like text, email, or passwords, with labels and buttons for input and submission.</p>
 <pre><code>&lt;form&gt;
   &lt;label&gt;Name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
   &lt;label&gt;Email: &lt;input type="email"&gt;&lt;/label&gt;&lt;br&gt;
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
+&lt;/form&gt;</code></pre>
       </section>
 
-      <!-- Lesson 9 -->
-      <section class="lesson" id="lesson9">
-        <h2>Lesson 9: Semantic HTML</h2>
-        <p>Semantic tags help describe meaning: <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>.</p>
-<pre><code>&lt;nav&gt;
-  &lt;a href="#"&gt;Home&lt;/a&gt; |
-  &lt;a href="#"&gt;About&lt;/a&gt;
-&lt;/nav&gt;
-
-&lt;article&gt;
-  &lt;h2&gt;Blog Post&lt;/h2&gt;
-  &lt;p&gt;This is a semantic example.&lt;/p&gt;
-&lt;/article&gt;
-</code></pre>
-      </section>
-
-      <!-- Lesson 10 -->
-      <section class="lesson" id="lesson10">
-        <h2>Lesson 10: Media</h2>
-        <p>You can add videos and audio to a webpage.</p>
-<pre><code>&lt;video width="300" controls&gt;
-  &lt;source src="video.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-
-&lt;audio controls&gt;
-  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+      <section class="lesson" id="media">
+        <h2>Audio & Video</h2>
+        <p>Use <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> to embed media. Controls let users play, pause, or adjust volume.</p>
+<pre><code>&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
-</code></pre>
+
+&lt;video width="300" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
       </section>
 
-      <!-- Lesson 11 -->
-      <section class="lesson" id="lesson11">
-        <h2>Lesson 11: Iframes</h2>
-        <p>An iframe embeds another webpage into your page.</p>
-<pre><code>&lt;iframe src="https://example.com" width="400" height="200"&gt;&lt;/iframe&gt;
-</code></pre>
+      <section class="lesson" id="iframes">
+        <h2>Iframes</h2>
+        <p>An iframe embeds another webpage inside your page for content like maps, videos, or external websites.</p>
+<pre><code>&lt;iframe src="https://example.com" width="300" height="200"&gt;&lt;/iframe&gt;</code></pre>
       </section>
 
-      <!-- Lesson 12 -->
-      <section class="lesson" id="lesson12">
-        <h2>Lesson 12: HTML APIs</h2>
-        <p>Some HTML APIs include Canvas, Drag & Drop, and Geolocation.</p>
+      <section class="lesson" id="semantic">
+        <h2>Semantic HTML</h2>
+        <p>Semantic tags provide meaning: <code>&lt;header&gt;</code> for headers, <code>&lt;nav&gt;</code> for navigation, <code>&lt;article&gt;</code> for independent sections, and <code>&lt;footer&gt;</code> for footers.</p>
+<pre><code>&lt;header&gt;Header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></pre>
+      </section>
+
+      <section class="lesson" id="classes-ids">
+        <h2>Classes & IDs</h2>
+        <p>Classes (<code>class</code>) apply styles to multiple elements. IDs (<code>id</code>) uniquely identify one element for CSS/JS.</p>
+<pre><code>&lt;div id="unique" class="card highlight"&gt;Content&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="lesson" id="meta">
+        <h2>Meta Tags</h2>
+        <p>Meta tags store page info, such as character set, description, and keywords. Important for SEO and page metadata.</p>
+<pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="Learn HTML step by step"&gt;</code></pre>
+      </section>
+
+      <section class="lesson" id="responsive-images">
+        <h2>Responsive Images</h2>
+        <p>Responsive images adapt to screen sizes using <code>&lt;picture&gt;</code> or <code>srcset</code> for better mobile experience.</p>
+<pre><code>&lt;picture&gt;
+  &lt;source media="(max-width: 600px)" srcset="small.jpg"&gt;
+  &lt;img src="large.jpg" alt="Responsive image"&gt;
+&lt;/picture&gt;</code></pre>
+      </section>
+
+      <!-- Advanced -->
+      <section class="lesson" id="entities">
+        <h2>HTML Entities</h2>
+        <p>Entities represent special characters like <code>&amp;amp;</code> (&amp;), <code>&amp;lt;</code> (&lt;), or <code>&amp;gt;</code> (&gt;).</p>
+<pre><code>&amp; &lt; &gt; &quot; &apos;</code></pre>
+      </section>
+
+      <section class="lesson" id="data-attributes">
+        <h2>Data Attributes</h2>
+        <p>Store extra info on elements for JavaScript without affecting content. Syntax: <code>data-key="value"</code>.</p>
+<pre><code>&lt;div data-user="Ezekiel"&gt;Hello&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="lesson" id="svg">
+        <h2>SVG Graphics</h2>
+        <p>SVG creates scalable vector graphics directly in HTML. Perfect for icons or illustrations that stay sharp at any size.</p>
+<pre><code>&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="green" fill="yellow" /&gt;
+&lt;/svg&gt;</code></pre>
+      </section>
+
+      <section class="lesson" id="canvas-advanced">
+        <h2>Canvas (Advanced)</h2>
+        <p>The <code>&lt;canvas&gt;</code> element allows drawing graphics via JavaScript for animations, charts, or games.</p>
 <pre><code>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
-
 &lt;script&gt;
-  const c = document.getElementById("myCanvas");
-  const ctx = c.getContext("2d");
-  ctx.fillStyle = "red";
-  ctx.fillRect(20, 20, 150, 50);
-&lt;/script&gt;
-</code></pre>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+ctx.fillStyle = "red";
+ctx.fillRect(20, 20, 150, 50);
+&lt;/script&gt;</code></pre>
       </section>
 
-      <!-- Lesson 13 -->
-      <section class="lesson" id="lesson13">
-        <h2>Lesson 13: CSS Intro</h2>
-        <p>CSS is used to style HTML content.</p>
-<pre><code>&lt;style&gt;
-  body { background: lightblue; }
-  h1 { color: darkblue; }
-&lt;/style&gt;
-
-&lt;h1&gt;Styled Heading&lt;/h1&gt;
-</code></pre>
+      <section class="lesson" id="accessibility">
+        <h2>Accessibility (ARIA)</h2>
+        <p>ARIA roles help screen readers interpret content. Use roles and attributes for a more accessible site.</p>
+<pre><code>&lt;button role="switch" aria-checked="false"&gt;Toggle&lt;/button&gt;</code></pre>
       </section>
 
-      <!-- Lesson 14 -->
-      <section class="lesson" id="lesson14">
-        <h2>Lesson 14: Responsive</h2>
-        <p>Use media queries to make websites mobile-friendly.</p>
-<pre><code>&lt;style&gt;
-  body { font-size: 16px; }
-  @media (max-width: 600px) {
-    body { font-size: 12px; }
-  }
-&lt;/style&gt;
-</code></pre>
+      <section class="lesson" id="seo">
+        <h2>SEO HTML</h2>
+        <p>Proper headings, semantic tags, alt text, and meta tags improve search engine rankings.</p>
       </section>
 
-      <!-- Lesson 15 -->
-      <section class="lesson" id="lesson15">
-        <h2>Lesson 15: Projects</h2>
-        <p>Build small projects to practice what you learned.</p>
-<pre><code>&lt;h1&gt;My Portfolio&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Project 1&lt;/li&gt;
-  &lt;li&gt;Project 2&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-      </section>
-
-      <!-- Lesson 16 -->
-      <section class="lesson" id="lesson16">
-        <h2>Lesson 16: Cheatsheets</h2>
-        <p>Quick reference for common HTML tags and attributes.</p>
-<pre><code>&lt;!-- Common Tags --&gt;
-&lt;h1&gt;Heading&lt;/h1&gt;
-&lt;p&gt;Paragraph&lt;/p&gt;
-&lt;a href="#"&gt;Link&lt;/a&gt;
-&lt;img src="image.jpg" alt="Alt text"&gt;
-</code></pre>
+      <section class="lesson" id="open-graph">
+        <h2>Open Graph Tags</h2>
+        <p>Open Graph tags control how your page appears on social media with title, description, and images.</p>
+<pre><code>&lt;meta property="og:title" content="My Page"&gt;
+&lt;meta property="og:description" content="HTML Tutorial"&gt;
+&lt;meta property="og:image" content="image.jpg"&gt;</code></pre>
       </section>
 
     </main>
   </div>
-  
+
   <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Know Your Program. All rights reserved.</p>
     <p><a href="../Main_Page/Home.html">🏠 Back to Home</a></p>
   </footer>
 
-  <!-- Back to Top Button -->
-<button id="backToTop" class="back-to-top">↑</button>
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top">↑</button>
 
   <script src="html_script.js"></script>
 </body>

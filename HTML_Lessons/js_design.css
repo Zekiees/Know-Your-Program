@@ -261,6 +261,31 @@
   .sidebar::-webkit-scrollbar-thumb:hover {
     background: var(--brand-600);
   }
+
+  /* Copy Code Button */
+pre {
+  position: relative; /* needed for absolute positioning of button */
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--brand-600);
+  color: var(--ink);
+  border: none;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--brand-700);
+  transform: scale(1.05);
+}
   
   .footer {
     text-align: center;

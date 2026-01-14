@@ -4,14 +4,22 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   JAVA COLOR THEME
+   ========================= */
 :root {
-  --brand: #e34c26;
-  --brand-600: #ff6b35;
-  --brand-700: #cc3b17;
-  --accent: #ff9f66;
-  --ink: #f5f5f5;
-  --paper: #0d1117;
-  --soft: rgba(255, 107, 53, 0.15);
+  /* Java Blue - adjusted for visibility */
+  --brand: #6aa8c8;
+  --brand-600: #82b7d8;
+  --brand-700: #3c5f7b;
+
+  /* Java Coffee Accent */
+  --accent: #f89820;
+
+  /* UI Colors */
+  --ink: #f4f6f8;
+  --paper: #0b1220;
+  --soft: rgba(248, 152, 32, 0.18);
 }
 
 body {
@@ -21,6 +29,9 @@ body {
   line-height: 1.6;
 }
 
+/* =========================
+   TOPBAR
+   ========================= */
 .topbar {
   display: flex;
   align-items: center;
@@ -60,17 +71,23 @@ body {
   background: rgba(255,255,255,.18);
 }
 
+/* =========================
+   PROGRESS BAR
+   ========================= */
 .progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   height: 4px;
-  background: var(--brand-600);
+  background: var(--accent);
   width: 0%;
   z-index: 2000;
   transition: width 0.2s ease;
 }
 
+/* =========================
+   HERO SECTION
+   ========================= */
 header.hero {
   position: relative;
   isolation: isolate;
@@ -87,7 +104,7 @@ header.hero > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(150%) contrast(105%);
+  filter: saturate(140%) contrast(105%);
   z-index: -2;
 }
 
@@ -96,7 +113,11 @@ header.hero::after {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(227,76,38,.65), rgba(255,107,53,.55));
+  background: linear-gradient(
+    180deg,
+    rgba(60,95,123,.75),
+    rgba(248,152,32,.45)
+  );
   mix-blend-mode: multiply;
 }
 
@@ -117,16 +138,22 @@ header.hero::after {
   opacity: .95;
 }
 
+/* =========================
+   LAYOUT
+   ========================= */
 .container {
   display: flex;
   margin: 2rem;
   gap: 2rem;
 }
 
+/* =========================
+   SIDEBAR
+   ========================= */
 .sidebar {
   width: 230px;
-  background: linear-gradient(180deg, #121212, #0d1117);
-  border: 1px solid rgba(255,107,53,0.25);
+  background: linear-gradient(180deg, #0f1b2d, #0b1220);
+  border: 1px solid rgba(106,168,200,0.35);
   padding: 1.2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,.4);
@@ -150,7 +177,7 @@ header.hero::after {
   padding: .6rem 1rem;
   border-radius: 8px;
   text-decoration: none;
-  color: #ddd;
+  color: #dbe6ee;
   font-weight: 500;
   transition: all .3s ease;
 }
@@ -160,60 +187,21 @@ header.hero::after {
   background: var(--brand-600);
   color: white;
   transform: translateX(5px);
-  box-shadow: 0 0 10px var(--brand-600);
+  box-shadow: 0 0 10px var(--accent);
 }
 
-.lesson.intro {
-  border-left: 6px solid var(--brand-600);
-  background: #161b22;
-}
-
-.lesson.intro h2 {
-  color: var(--brand-600);
-}
-
-.lesson.intro p {
-  font-size: 1.1rem;
-  opacity: .9;
-  margin-bottom: 1rem;
-}
-
-.lessons {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.lesson {
-  background: #111827;
-  border-radius: 12px;
-  padding: 1.5rem;
-  border-left: 6px solid var(--brand-600);
-  box-shadow: 0 4px 12px rgba(0,0,0,.5);
-  transition: transform .25s ease, box-shadow .3s ease;
-}
-
-.lesson:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(255,107,53,.35);
-}
-
-.lesson h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--brand-600);
-  margin-bottom: .8rem;
-}
-/* Code block styling */
+/* =========================
+   CODE BLOCKS
+   ========================= */
 pre {
-  background: #1a1f28; /* Dark background matching theme */
+  background: #101826;
   border: 1px solid var(--brand-600);
   border-radius: 10px;
   padding: 1rem;
   overflow-x: auto;
   margin: 1rem 0;
   box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  position: relative;
 }
 
 pre code {
@@ -225,27 +213,18 @@ pre code {
   color: var(--ink);
 }
 
-pre code .tag { color: var(--brand-600); }
-pre code .attr { color: #ffd166; }
-pre code .val { color: #fca311; }
-
-/* Optional: add a subtle hover effect for code blocks */
 pre:hover {
   border-color: var(--accent);
-  box-shadow: 0 6px 16px rgba(255,107,53,.35);
+  box-shadow: 0 6px 16px rgba(248,152,32,.35);
 }
 
-/* Copy Code Button */
-pre {
-  position: relative; /* needed for absolute positioning of button */
-}
-
+/* Copy Button */
 .copy-btn {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  background: var(--brand-600);
-  color: var(--ink);
+  background: var(--accent);
+  color: #000;
   border: none;
   padding: 0.35rem 0.7rem;
   font-size: 0.85rem;
@@ -256,22 +235,24 @@ pre {
 }
 
 .copy-btn:hover {
-  background: var(--brand-700);
+  background: #d97706;
   transform: scale(1.05);
 }
 
-
+/* =========================
+   FOOTER
+   ========================= */
 .footer {
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 2rem;
-  background: linear-gradient(90deg, #0d1117, #121212);
+  background: linear-gradient(90deg, #0b1220, #0f1b2d);
   border-top: 2px solid var(--brand-600);
   color: #ccc;
 }
 
 .footer a {
-  color: var(--brand-600);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -280,39 +261,40 @@ pre {
   text-decoration: underline;
 }
 
+/* =========================
+   BACK TO TOP
+   ========================= */
 #backToTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--brand-600);
-  color: black;
+  background: var(--accent);
+  color: #000;
   border: none;
   padding: 0.7rem 1rem;
   border-radius: 50%;
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,.3);
-  transition: 
-    background 0.3s ease, 
-    transform 0.2s ease, 
-    opacity 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
   z-index: 1500;
   opacity: 0;
   pointer-events: none;
 }
 
 #backToTop:hover {
-  background: var(--brand-700);
+  background: #d97706;
   transform: scale(1.1);
 }
 
-/* When visible */
 #backToTop.visible {
   opacity: 1;
   pointer-events: auto;
 }
 
-
+/* =========================
+   HAMBURGER & MOBILE
+   ========================= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -339,7 +321,7 @@ pre {
   right: -100%;
   width: 70%;
   height: 100%;
-  background: #0d1117;
+  background: #0b1220;
   padding: 2rem 1.5rem;
   box-shadow: -4px 0 12px rgba(0,0,0,.6);
   transition: right 0.3s ease;
@@ -359,9 +341,12 @@ pre {
 }
 
 .mobile-nav a:hover {
-  color: var(--brand-600);
+  color: var(--accent);
 }
 
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -382,16 +367,6 @@ pre {
   .sidebar.active {
     left: 0;
   }
-  .overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 1050;
-  }
-  .overlay.active {
-    display: block;
-  }
 }
 
 @media (max-width: 768px) {
@@ -408,33 +383,10 @@ pre {
   .hero p {
     font-size: 1rem;
   }
-}
-
-.lesson.intro,
-.lesson {
-  margin: 0 1rem;
-}
-
-@media (max-width: 600px) {
-  .lesson {
-    padding: 1rem;
-  }
-  .lesson h2 {
-    font-size: 1.3rem;
-  }
-  .lesson p {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
   .nav {
     display: none;
   }
   .hamburger {
     display: flex;
-  }
-  .topbar {
-    justify-content: space-between;
   }
 }

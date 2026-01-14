@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Lessons</title>
+  <link rel="stylesheet" href="html_design.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="brand">Know Your Program</div>
+    <nav class="nav">
+      <a href="../Main_Page/Home.html">Home Page</a>
+    </nav>
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="progress-bar"></div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="/head-images/Londrina Shadow java.jpg" alt="Java banner art" />
+    <div class="hero-inner">
+      <h1>Java Lessons</h1>
+      <p>☕ Learn Java Step-by-Step • Beginner to Advanced • Code-Focused</p>
+    </div>
+  </header>
+
+  <!-- Introduction Section -->
+  <section class="lesson intro">
+    <h2>Welcome to Java Lessons 🚀</h2>
+    <p>
+      <strong>Java</strong> is a powerful, object-oriented programming language used in
+      web applications, mobile apps, desktop software, and enterprise systems.
+      This course covers Java fundamentals up to advanced concepts with practical examples.
+    </p>
+  </section>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <!-- Basics -->
+        <li><a href="#intro-java">What is Java?</a></li>
+        <li><a href="#setup">Setup & Installation</a></li>
+        <li><a href="#syntax">Java Syntax</a></li>
+        <li><a href="#variables">Variables & Data Types</a></li>
+        <li><a href="#operators">Operators</a></li>
+        <li><a href="#conditionals">Conditionals</a></li>
+        <li><a href="#loops">Loops</a></li>
+
+        <!-- Intermediate -->
+        <li><a href="#methods">Methods</a></li>
+        <li><a href="#arrays">Arrays</a></li>
+        <li><a href="#strings">Strings</a></li>
+        <li><a href="#oop">OOP Concepts</a></li>
+        <li><a href="#classes">Classes & Objects</a></li>
+        <li><a href="#inheritance">Inheritance</a></li>
+        <li><a href="#polymorphism">Polymorphism</a></li>
+
+        <!-- Advanced -->
+        <li><a href="#exceptions">Exception Handling</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#file-io">File I/O</a></li>
+        <li><a href="#threads">Multithreading</a></li>
+        <li><a href="#jdbc">JDBC</a></li>
+        <li><a href="#gui">Java GUI</a></li>
+        <li><a href="#best-practices">Best Practices</a></li>
+      </ul>
+    </aside>
+
+    <!-- Lessons -->
+    <main class="lessons">
+
+      <!-- Basics -->
+      <section class="lesson" id="intro-java">
+        <h2>What is Java?</h2>
+        <p>Java is a high-level, object-oriented programming language designed to be platform-independent using the JVM.</p>
+      </section>
+
+      <section class="lesson" id="setup">
+        <h2>Setup & Installation</h2>
+        <p>To run Java programs, install the JDK and use an IDE like IntelliJ, Eclipse, or VS Code.</p>
+<pre><code>public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+  }
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="syntax">
+        <h2>Java Syntax</h2>
+        <p>Java programs use classes and methods. Execution starts from the <code>main</code> method.</p>
+<pre><code>class Example {
+  public static void main(String[] args) {
+    int x = 10;
+    System.out.println(x);
+  }
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="variables">
+        <h2>Variables & Data Types</h2>
+        <p>Variables store data. Java has primitive and reference data types.</p>
+<pre><code>int age = 20;
+double price = 99.99;
+char grade = 'A';
+boolean isJavaFun = true;</code></pre>
+      </section>
+
+      <section class="lesson" id="operators">
+        <h2>Operators</h2>
+        <p>Operators perform operations like arithmetic, comparison, and logic.</p>
+<pre><code>int a = 10, b = 5;
+System.out.println(a + b);
+System.out.println(a > b);</code></pre>
+      </section>
+
+      <section class="lesson" id="conditionals">
+        <h2>Conditionals</h2>
+        <p>Conditionals control program flow using <code>if</code>, <code>else</code>, and <code>switch</code>.</p>
+<pre><code>if (age >= 18) {
+  System.out.println("Adult");
+} else {
+  System.out.println("Minor");
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="loops">
+        <h2>Loops</h2>
+        <p>Loops repeat code execution using <code>for</code>, <code>while</code>, or <code>do-while</code>.</p>
+<pre><code>for (int i = 1; i <= 5; i++) {
+  System.out.println(i);
+}</code></pre>
+      </section>
+
+      <!-- Intermediate -->
+      <section class="lesson" id="methods">
+        <h2>Methods</h2>
+        <p>Methods are reusable blocks of code that perform a specific task.</p>
+<pre><code>static int add(int a, int b) {
+  return a + b;
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="arrays">
+        <h2>Arrays</h2>
+        <p>Arrays store multiple values of the same type.</p>
+<pre><code>int[] numbers = {1, 2, 3, 4};
+System.out.println(numbers[0]);</code></pre>
+      </section>
+
+      <section class="lesson" id="strings">
+        <h2>Strings</h2>
+        <p>Strings represent text and come with built-in methods.</p>
+<pre><code>String name = "Ezekiel";
+System.out.println(name.length());</code></pre>
+      </section>
+
+      <section class="lesson" id="oop">
+        <h2>OOP Concepts</h2>
+        <p>Java follows Object-Oriented Programming: encapsulation, inheritance, polymorphism, and abstraction.</p>
+      </section>
+
+      <section class="lesson" id="classes">
+        <h2>Classes & Objects</h2>
+        <p>Classes are blueprints; objects are instances of classes.</p>
+<pre><code>class Car {
+  String model;
+}
+
+Car c = new Car();
+c.model = "Toyota";</code></pre>
+      </section>
+
+      <section class="lesson" id="inheritance">
+        <h2>Inheritance</h2>
+        <p>Inheritance allows a class to acquire properties of another class.</p>
+<pre><code>class Animal {
+  void sound() {}
+}
+
+class Dog extends Animal {
+  void sound() {
+    System.out.println("Bark");
+  }
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="polymorphism">
+        <h2>Polymorphism</h2>
+        <p>Polymorphism allows methods to behave differently based on objects.</p>
+      </section>
+
+      <!-- Advanced -->
+      <section class="lesson" id="exceptions">
+        <h2>Exception Handling</h2>
+        <p>Exceptions handle runtime errors using <code>try-catch</code>.</p>
+<pre><code>try {
+  int x = 10 / 0;
+} catch (Exception e) {
+  System.out.println("Error occurred");
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="collections">
+        <h2>Collections</h2>
+        <p>The Collections Framework manages groups of objects.</p>
+<pre><code>ArrayList<String> list = new ArrayList<>();
+list.add("Java");</code></pre>
+      </section>
+
+      <section class="lesson" id="file-io">
+        <h2>File I/O</h2>
+        <p>Java reads and writes files using streams.</p>
+<pre><code>File file = new File("data.txt");</code></pre>
+      </section>
+
+      <section class="lesson" id="threads">
+        <h2>Multithreading</h2>
+        <p>Threads allow concurrent execution.</p>
+<pre><code>class MyThread extends Thread {
+  public void run() {
+    System.out.println("Running");
+  }
+}</code></pre>
+      </section>
+
+      <section class="lesson" id="jdbc">
+        <h2>JDBC</h2>
+        <p>JDBC connects Java applications to databases.</p>
+      </section>
+
+      <section class="lesson" id="gui">
+        <h2>Java GUI</h2>
+        <p>Java provides Swing and JavaFX for graphical user interfaces.</p>
+      </section>
+
+      <section class="lesson" id="best-practices">
+        <h2>Best Practices</h2>
+        <p>Write clean code, use meaningful names, and follow Java conventions.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Know Your Program. All rights reserved.</p>
+    <p><a href="../Main_Page/Home.html">🏠 Back to Home</a></p>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <script src="html_script.js"></script>
+</body>
+</html>

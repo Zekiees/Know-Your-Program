@@ -39,7 +39,7 @@ registerBtn.addEventListener("click", async (e) => {
   const password = registerForm.querySelector("input[type='password']").value;
 
   if (!username || !email || !password) {
-    alert("⚠️ Please fill in all registration fields.");
+    reportValidity("⚠️ Please fill in all registration fields.");
     return;
   }
 
@@ -48,7 +48,7 @@ registerBtn.addEventListener("click", async (e) => {
     const q = query(collection(db, "users"), where("username", "==", username));
     const querySnapshot = await getDocs(q);
     if (!querySnapshot.empty) {
-      alert("⚠️ Username already exists. Choose another one.");
+      reportValidity("⚠️ Username already exists. Choose another one.");
       return;
     }
 
@@ -64,7 +64,6 @@ registerBtn.addEventListener("click", async (e) => {
       createdAt: new Date()
     });
 
-    alert("✅ Registration successful!");
     registerForm.querySelector("form").reset();
     registerForm.style.display = "none";
     loginForm.style.display = "block";
@@ -74,7 +73,7 @@ registerBtn.addEventListener("click", async (e) => {
 
   } catch (error) {
     console.error(error);
-    alert("❌ Error: " + error.message);
+    loginForm.reportValidity();
   }
 });
 
@@ -86,7 +85,7 @@ loginBtn.addEventListener("click", async (e) => {
   const password = loginForm.querySelector("input[type='password']").value;
 
   if (!input || !password) {
-    alert("⚠️ Please fill in all login fields.");
+    registerForm.reportValidity();
     return;
   }
 
@@ -98,7 +97,7 @@ loginBtn.addEventListener("click", async (e) => {
       const q = query(collection(db, "users"), where("username", "==", input));
       const querySnapshot = await getDocs(q);
       if (querySnapshot.empty) {
-        alert("❌ Username not found.");
+        reportValidity("❌ Username not found.");
         return;
       }
       emailToUse = querySnapshot.docs[0].data().email;
